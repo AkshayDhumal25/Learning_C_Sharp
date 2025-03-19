@@ -226,35 +226,311 @@
 
 
 // Que 4
-using System;
-namespace Car
-{
-    class camera
-    {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Enter the Speed Limit :");
-            int speedLimit = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Speed of Car :");
-            int carSpeed = Convert.ToInt32(Console.ReadLine());
-            int overSpeed = carSpeed - speedLimit; 
+//using System;
+//namespace Car
+//{
+//    class camera
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter the Speed Limit :");
+//            int speedLimit = Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("Enter the Speed of Car :");
+//            int carSpeed = Convert.ToInt32(Console.ReadLine());
+//            int overSpeed = carSpeed - speedLimit; 
 
-            if(carSpeed < speedLimit)
+//            if(carSpeed < speedLimit)
+//            {
+//                Console.WriteLine("OK");
+//            }
+//            else
+//            {
+//                int demeritPoints = overSpeed / 5;
+//                if(demeritPoints < 12)
+//                {
+//                    Console.WriteLine("Demerits points : " + demeritPoints);
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Lincense Cancelled");
+//                }
+//            }
+//        }
+//    }
+//}
+
+
+//**************Iteration Statements****************
+//using System;
+//namespace conditionals
+//{
+//    class statements
+//    {
+//        public static void Main(string[] args)
+//        {
+//            //int n = Convert.ToInt32(Console.ReadLine());
+//            //for(int i = 0; i < n; i++)
+//            //{
+//            //    Console.WriteLine(i);
+//            //}
+
+//            //string name = Console.ReadLine();
+//            //foreach(var character in name)
+//            //{
+//            //    Console.WriteLine(character);
+//            //}
+
+//            //int n = 1;
+//            //while (n < 11)
+//            //{
+//            //    Console.WriteLine(n);
+//            //    n++;
+//            //}
+//        }
+//    }
+//}
+
+//******************** Random Class
+//using System;
+//namespace CSharpFundamentals
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            //var random = new Random();
+//            //for(var i = 0; i < 10; i++)
+//            //{
+//            //    Console.WriteLine(random.Next(1, 10));  // need more practice
+//            //}
+
+//            Console.WriteLine((int)'a');
+//        }
+//    }
+//}
+
+
+//************ Exercise Iteration Statements**********
+// Que 1
+//using System;
+//namespace count
+//{
+//    class divide
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int n = 100;
+//            int count = 0;
+//            for(int i = 1; i <= n; i++)
+//            {
+//                if(i % 3 == 0)
+//                {
+//                    count++;
+//                }
+//            }
+//            Console.WriteLine(count);
+//        }
+//    }
+//}
+
+// Que 2
+//using System;
+//namespace add
+//{
+//    class consistency
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int totalSum = 0;
+//            while (true)
+//            {
+//                Console.WriteLine("Enter the number : ");
+//                string input = Console.ReadLine();
+//                if (input.ToLower() == "ok")
+//                {
+//                    break;
+//                }
+//                totalSum += Convert.ToInt32(input);
+//            }
+//            Console.WriteLine(totalSum);
+//        }
+//    }
+//}
+
+// que 3
+//using System;
+//namespace factoral
+//{
+//    class numbers
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int num = 0;
+//            num = Convert.ToInt32(Console.ReadLine());
+//            int multiplication = 1;
+//            for(int i = num; i > 0; i--)
+//            {
+//                multiplication *= i;
+//            }
+//            Console.WriteLine(multiplication);
+
+//        }
+//    }
+//}
+
+// Que 4
+//using System;
+//namespace game
+//{
+//    class predict
+//    {
+//        public static void Main(string[] args)
+//        {
+//            var number = new Random().Next(1, 10);
+//            Console.WriteLine("Secret Number :" + number);
+//            for(var i = 0; i < 3; i++)
+//            {
+//                Console.WriteLine("Guess the secret number :");
+//                var guess = Convert.ToInt32(Console.ReadLine());
+//                if(guess == number)
+//                {
+//                    Console.WriteLine("You Won!!!");
+
+//                }
+//                else
+//                {
+//                    Console.WriteLine("You Lost !");
+//                }
+
+//            }
+
+//        }
+//    }
+//}
+//using System;
+
+//namespace Game
+//{
+//    class Predict
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Random random = new Random();
+//            int secretNumber = random.Next(1, 10); // Generate a random number between 1 and 10
+//            int attempts = 3; // Max number of attempts
+
+//            Console.WriteLine("Welcome to the Number Guessing Game!");
+//            Console.WriteLine($"You have {attempts} attempts to guess the correct number.");
+
+//            for (int i = 1; i <= attempts; i++)
+//            {
+//                Console.Write($"Attempt {i}/{attempts} - Enter your guess (1-10): ");
+
+//                // Validate user input
+//                if (!int.TryParse(Console.ReadLine(), out int guess) || guess < 1 || guess > 10)
+//                {
+//                    Console.WriteLine("Invalid input! Please enter a number between 1 and 10.");
+//                    i--; // Do not count this attempt
+//                    continue;
+//                }
+
+//                if (guess == secretNumber)
+//                {
+//                    Console.WriteLine("🎉 Congratulations! You guessed the secret number correctly. You Won! 🎉");
+//                    return; // Exit the game
+//                }
+//                else
+//                {
+//                    Console.WriteLine("❌ Wrong guess! Try again.");
+//                }
+//            }
+
+//            // If the user fails all attempts, reveal the secret number
+//            Console.WriteLine($"Game Over! The correct number was {secretNumber}. Better luck next time!");
+//        }
+//    }
+//}
+
+// Que 4
+//using System;
+
+//namespace getinput
+//{
+//    class commaSeparated
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter comma-separated values:"); // Removed extra '{'
+
+//            var input = Console.ReadLine();
+//            var number = input.Split(',');
+
+//            var max = Convert.ToInt32(number[0].Trim()); // Trim spaces before conversion
+
+//            foreach (var num in number)
+//            {
+//                var num1 = Convert.ToInt32(num.Trim()); // Trim spaces
+//                if (num1 > max)
+//                {
+//                    max = num1;
+//                }
+//            }
+
+//            Console.WriteLine("Maximum number: " + max);
+//        }
+//    }
+//}
+
+
+//************************************* Arrays and Lists ****************
+using System;
+namespace CSharpFundamentals
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[] { 1, 2, 10, 4, 5, 9 };
+            //Length
+            Console.WriteLine("Length: " + numbers.Length);
+
+            //IndexOf()
+            var index =Array.IndexOf(numbers, 9);
+            Console.WriteLine("Index of 9: " + index);
+
+            //clear()
+            Array.Clear(numbers, 0, 2);
+            foreach(var n in numbers)
             {
-                Console.WriteLine("OK");
+                Console.WriteLine(n);
             }
-            else
+
+
+            //Copy()
+            int[] another = new int[3];
+            Array.Copy(numbers, another, 3);
+            foreach(var m in another)
             {
-                int demeritPoints = overSpeed / 5;
-                if(demeritPoints < 12)
-                {
-                    Console.WriteLine("Demerits points : " + demeritPoints);
-                }
-                else
-                {
-                    Console.WriteLine("Lincense Cancelled");
-                }
+                Console.WriteLine(m);
             }
+
+            //Sort()
+            Array.Sort(numbers);
+            Console.WriteLine("Effect of Sort()");
+            foreach(var i in numbers) {
+                Console.WriteLine(i);
+            }
+
+
+            // Reverse()
+            Array.Reverse(numbers);
+            Console.WriteLine("Effect of Reverse()");
+            foreach(var n in numbers)
+            {
+                Console.WriteLine(n);
+            }
+
+
         }
     }
 }
