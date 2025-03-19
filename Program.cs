@@ -146,25 +146,115 @@
 //}
 
 //********************************Exercise********************************
+// Que 1.
+//using System;
+//namespace number
+//{
+//    class checkNum
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int n = 0;
+//            Console.WriteLine("Enter the number between 1 to 10 :");
+//            n = Convert.ToInt32(Console.ReadLine());
+//            if(n > 0 && n <= 10)
+//            {
+//                Console.WriteLine("Valid");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Invalid");
+//            }
+
+//        }
+//    }
+//}
+
+
+//**** Que 2
+// 2- Write a program which takes two numbers from the console and displays the maximum of the two.
+//using System;
+//namespace maximum
+//{
+//    class MaxNum
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int x, y;
+//            Console.WriteLine("Enter the 1st and 2nd No to check maximum from them :");
+//            x = Convert.ToInt32(Console.ReadLine());
+//            y = Convert.ToInt32(Console.ReadLine());
+//            if(x > y)
+//            {
+//                Console.WriteLine(x);
+//            }
+//            else
+//            {
+//                Console.WriteLine(y);
+//            }
+//        }
+//    }
+//}
+
+
+// Que 3
+//3 - Write a program and ask the user to enter the width and height of an image. 
+//    Then tell if the image is landscape or portrait.
+//using System;
+//namespace imageCheck
+//{
+//    class sizeOfimage
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int height, width;
+//            Console.WriteLine("Enter the height of Image :");
+//            height = Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("Enter the width of Image :");
+//            width = Convert.ToInt32(Console.ReadLine());
+//            if(height > width)
+//            {
+//                Console.WriteLine("Portrait");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Landscape");
+//            }
+//        }
+//    }
+//}
+
+
+// Que 4
 using System;
-namespace number
+namespace Car
 {
-    class checkNum
+    class camera
     {
         public static void Main(string[] args)
         {
-            int n = 0;
-            Console.WriteLine("Enter the number between 1 to 10 :");
-            n = Convert.ToInt32(Console.ReadLine());
-            if(n > 0 && n <= 10)
+            Console.WriteLine("Enter the Speed Limit :");
+            int speedLimit = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Speed of Car :");
+            int carSpeed = Convert.ToInt32(Console.ReadLine());
+            int overSpeed = carSpeed - speedLimit; 
+
+            if(carSpeed < speedLimit)
             {
-                Console.WriteLine("Valid");
+                Console.WriteLine("OK");
             }
             else
             {
-                Console.WriteLine("Invalid");
+                int demeritPoints = overSpeed / 5;
+                if(demeritPoints < 12)
+                {
+                    Console.WriteLine("Demerits points : " + demeritPoints);
+                }
+                else
+                {
+                    Console.WriteLine("Lincense Cancelled");
+                }
             }
-
         }
     }
 }
