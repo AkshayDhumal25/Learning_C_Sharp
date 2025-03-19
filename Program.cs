@@ -68,6 +68,7 @@ namespace CSharpFundamentals
             var person = new Person() { Age = 20 };
             MakeOld(person);
             Console.WriteLine(person.Age);
+            Console.WriteLine("Hwllo world");
         }
         public static void Increment(int number)
         {
