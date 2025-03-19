@@ -49,35 +49,55 @@
 //        }
 //    }
 //}
-using System;
 
-namespace CSharpFundamentals
+
+//using System;
+
+//namespace CSharpFundamentals
+//{
+//    public class Person
+//    {
+//        public int Age;
+//    }
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            var number = 1;
+//            Increment(number);
+//            Console.WriteLine(number);
+
+//            var person = new Person() { Age = 20 };
+//            MakeOld(person);
+//            Console.WriteLine(person.Age);
+//            Console.WriteLine("Hwllo world");
+//        }
+//        public static void Increment(int number)
+//        {
+//            number += 10;
+//        }
+
+//        public static void MakeOld(Person person)
+//        {
+//            person.Age += 10;
+//        }
+//    }
+//}
+
+
+
+using System;
+ namespace Conditionals
 {
-    public class Person
-    {
-        public int Age;
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            var number = 1;
-            Increment(number);
-            Console.WriteLine(number);
-
-            var person = new Person() { Age = 20 };
-            MakeOld(person);
-            Console.WriteLine(person.Age);
-            Console.WriteLine("Hwllo world");
-        }
-        public static void Increment(int number)
-        {
-            number += 10;
-        }
-
-        public static void MakeOld(Person person)
-        {
-            person.Age += 10;
+            int hour = 10;
+            if(hour >0  && hour < 12)
+            {
+                Console.WriteLine("It's morning.");
+            }
         }
     }
 }
